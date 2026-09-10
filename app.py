@@ -19,8 +19,8 @@ app.config['MYSQL_PASSWORD']= ''
 app.config['MYSQL_DB']= 'itip'
 app.config['MYSQL_CURSORCLASS']= 'DictCursor'
 mysql=MySQL(app)
-CORREO = "mateolion0@gmail.com"
-CLAVE_APP = "wvbr yznq jglj dowq"
+CORREO = "TU CORREO"
+CLAVE_APP = "TU CLAVE"
 
 
 def enviar_codigo(correo_destino, codigo):
