@@ -60,9 +60,6 @@ CREATE TABLE `turnos` (
 -- Volcado de datos para la tabla `turnos`
 --
 
-INSERT INTO `turnos` (`id`, `rol`, `descripcion`, `nombres`, `apellidos`, `identificacion`, `fecha`) VALUES
-(1, 'certificado estudiantil', 'Necesito sacar mi certificado', 'mateo cristian', 'leon alvarez', 1012372972, '2026-08-20 10:15:15');
-
 -- --------------------------------------------------------
 
 --
@@ -80,9 +77,6 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `correo`, `password`, `id_rol`) VALUES
-(1, 'hola', '1234', 1),
-(2, 'holapapi', '1234', 2);
 
 --
 -- Índices para tablas volcadas
