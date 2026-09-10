@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/CSS/sedes.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../static/JS/sedes.js"></script>
+    <link rel="icon" href="..//static/Imagenes/Logo.png">
+    <title>Itip</title>
+</head>
+<header>
+    <h2>Instituto Tecnico Industrial Piloto</h2>
+</header>
+<body>
+    <main>
+        <nav >
+            <div class="nave">
+                <ul>
+                    <li class="boton-menu">
+                        <a href="#" id="botonMenu">
+                            <img src="../static/Imagenes/lista.png" class="lista">
+                        </a>
+
+                        <div class="menu-desplegable" id="menuDesplegable">
+                            <a href="./noticias.html">Noticias</a>
+                            <a href="./sedes.html">Sedes</a>
+                            <a href="./">Inicio</a
+                        </div>
+                    </li>
+                    <li><a href="./"><img src="../static/Imagenes/Logo.png" class="logo"></a></li>
+                    <li><a href="./iniciar_sesion.html">Volver</a></li>
+                </ul>
+            </div>
+        <div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-12 col-sm-10 col-md-7 col-lg-5">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body p-4 p-md-5 text-center">
+
+                    <h2 class="mb-3">
+                        Verificar correo
+                    </h2>
+
+                    <p class="text-muted mb-4">
+                        Hemos enviado un código de 6 dígitos a tu correo.
+                        Escríbelo para completar el registro.
+                    </p>
+
+
+                    {% if mensaje4 %}
+
+                    <div class="alert alert-danger text-center"
+                         role="alert">
+
+                        {{ mensaje4 }}
+
+                    </div>
+
+                    {% endif %}
+
+
+                    {% if mensaje2 %}
+
+                    <div class="alert alert-success text-center"
+                         role="alert">
+
+                        {{ mensaje2 }}
+
+                    </div>
+
+                    {% endif %}
+
+
+                    <form action="/verificar_codigo"
+                          method="POST">
+
+                        <div class="mb-4">
+
+                            <label for="codigo"
+                                   class="form-label fw-bold">
+
+                                Código de verificación
+
+                            </label>
+
+                            <input
+                                type="text"
+                                id="codigo"
+                                name="codigo"
+                                class="form-control form-control-lg text-center"
+                                maxlength="6"
+                                minlength="6"
+                                pattern="[0-9]{6}"
+                                placeholder="000000"
+                                autocomplete="one-time-code"
+                                required>
+
+                        </div>
+
+
+                        <div class="d-grid">
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary btn-lg">
+
+                                Verificar código
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+
+                    <hr class="my-4">
+
+
+                    <p class="text-muted mb-2">
+                        ¿No recibiste el código?
+                    </p>
+
+                    <a
+                        href="/reenviar_codigo"
+                        class="btn btn-outline-secondary">
+
+                        Reenviar código
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    </main>
+<footer>
+    <div class="texto_abajo">
+        <h2>ITIP</h2>
+<p>Información institucional y servicios de atención a la comunidad educativa</p>
+<p>PQR – Peticiones, Quejas, Reclamos, Sugerencias y Felicitaciones</p>
+<p>El Instituto Técnico Industrial Piloto promueve una formación integral, académica y técnica, fortaleciendo los conocimientos, valores, competencias y habilidades de sus estudiantes para contribuir al desarrollo personal, educativo y profesional.</p>
+<p>© 2026 Instituto Técnico Industrial Piloto – Institución Educativa Distrital. Todos los derechos reservados. Información institucional destinada a estudiantes, familias, docentes y demás integrantes de la comunidad educativa.</p>
+    </div>
+    <div class="abajo">
+        <ul>
+            <li><a href="https://x.com/institutopiloto?lang=nl"><img src="../static/Imagenes/Icono_Twitter.png" ></a></li>
+            <li><a href="https://maps.app.goo.gl/ej1RVD7x1y4TbtnX8"><img src="../static/Imagenes/Ubicacion.png"></a></li>
+            <li><a href="#" onclick="copiarCorreo(event)"><img src="../static/Imagenes/Correo.png" alt="Copiar correo"></a></li>
+            <li><a href="https://www.facebook.com/ITIPOFICIAL/?locale=es_LA"><img src="../static/Imagenes/facebook.png"></a></li>
+            <li><a href="https://youtube.com/@institutotecnicoindustrial408?si=yutcKy-q51SiHU15"><img src="../static/Imagenes/Icono_Youtube.png" ></a></li>
+        </ul>            
+    </div>
+</footer>
+</body>
+    
+
+</html>
+

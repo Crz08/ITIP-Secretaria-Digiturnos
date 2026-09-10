@@ -1,0 +1,77 @@
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-12 col-sm-10 col-md-7 col-lg-5">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body p-4 p-md-5 text-center">
+
+                    <h2 class="mb-3">
+                        Verificar código
+                    </h2>
+
+                    <p class="text-muted mb-4">
+                        Hemos enviado un código de 6 dígitos a tu correo.
+                    </p>
+
+                    {% if mensaje4 %}
+                    <div class="alert alert-danger">
+                        {{ mensaje4 }}
+                    </div>
+                    {% endif %}
+
+                    <form action="/verificar_recuperacion" method="POST">
+
+                        <div class="mb-4">
+
+                            <label for="codigo" class="form-label fw-bold">
+                                Código
+                            </label>
+
+                            <input
+                                type="text"
+                                id="codigo"
+                                name="codigo"
+                                class="form-control form-control-lg text-center"
+                                maxlength="6"
+                                minlength="6"
+                                pattern="[0-9]{6}"
+                                placeholder="000000"
+                                required>
+
+                        </div>
+
+                        <div class="d-grid">
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary btn-lg">
+
+                                Verificar código
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                    <hr class="my-4">
+
+                    <a href="/recuperar_password"
+                       class="btn btn-outline-secondary">
+
+                        Volver
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

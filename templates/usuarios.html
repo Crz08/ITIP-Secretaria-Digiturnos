@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/CSS/admin.css">
+    <link rel="stylesheet" href="../static/CSS/ver_turnos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="../static/JS/admin.js"></script>
+    <script src="../static/JS/ver_turnos.js"></script>
     <link rel="icon" href="..//static/Imagenes/Logo.png">
-    <title>Administrador</title>
+    <title>Itip</title>
 </head>
 <header>
     <h2>Instituto Tecnico Industrial Piloto</h2>
@@ -24,18 +24,103 @@
                         </a>
 
                         <div class="menu-desplegable" id="menuDesplegable">
-                            <a href="./ver_turnos.html">Ver turnos</a>
                             <a href="./agendar_citas.html">Agendar turnos</a>
-                            <a href="/usuarios.html">Administrar usuarios</a>
                         </div>
                     </li>
-                    <li><a href="./admin.html"><img src="../static/Imagenes/Logo.png" class="logo"></a></li>
-                    <li><a href="./iniciar_sesion.html">Salir</a></li>
+                    <li><a href="./ver_turnos.html"><img src="../static/Imagenes/Logo.png" class="logo"></a></li>
+                    <li><a href="./admin.html">Volver</a></li>
                 </ul>
             </div>
-            <div class="itipistas">
-                <h1>Bienvenido Administrador</h1>
-            </div>
+            <h1 class="itipistas">Usuarios registrados</h1>
+            <div class="container mt-5">
+
+
+    <div class="container mt-5 mb-5">
+
+    <h1 class="text-center mb-4">
+        Usuarios registrados
+    </h1>
+
+    <div class="table-responsive">
+
+        <table class="table table-bordered table-striped text-center align-middle">
+
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Correo</th>
+                    <th>Rol</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for usuario in usuarios %}
+
+                <tr>
+
+                    <td>{{ usuario.id }}</td>
+
+                    <td>{{ usuario.correo }}</td>
+
+                    <td>
+
+                        {% if usuario.id_rol == 1 %}
+
+                            <span class="badge bg-danger">
+                                Administrador
+                            </span>
+
+                        {% else %}
+
+                            <span class="badge bg-primary">
+                                Usuario
+                            </span>
+
+                        {% endif %}
+
+                    </td>
+
+                    <td>
+
+                        {% if usuario.id_rol == 1 %}
+
+                            <a href="{{ url_for('cambiar_rol', id=usuario.id) }}"
+                               class="btn btn-warning btn-sm"
+                               onclick="return confirm('¿Quieres quitarle el rol de administrador?')">
+
+                                Quitar Admin
+
+                            </a>
+
+                        {% else %}
+
+                            <a href="{{ url_for('cambiar_rol', id=usuario.id) }}"
+                               class="btn btn-success btn-sm"
+                               onclick="return confirm('¿Quieres darle permisos de administrador a este usuario?')">
+
+                                Dar Admin
+
+                            </a>
+
+                        {% endif %}
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+</div>
         </nav>
     </main>
 <footer>
