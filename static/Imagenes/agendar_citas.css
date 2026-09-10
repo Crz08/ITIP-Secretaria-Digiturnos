@@ -1,0 +1,234 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(247, 246, 246);
+}
+main{
+    flex: 1;
+}
+header {
+    background: black;
+    opacity: 0.75;
+    padding: 0.5% 0;
+}
+
+header h2 {
+    padding-left: 16%;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0;
+}
+.nave {
+    display: flex;
+    background: rgba(255, 255, 255, 0.833);
+    justify-content: center;
+    width: 82%;
+    margin: 0 auto;
+    margin-top: 0;
+    padding: 0.5% 0;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.nave ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+    gap: 1%;
+    padding: 1% 0;
+    margin: 0;
+}
+.lista {
+    width: 2rem;
+    height: 2rem;
+}
+.nave ul li a {
+    color: black;
+    text-decoration: none;
+}
+.nave ul li a:hover {
+    color: white;
+}
+.nave li:nth-child(2) {
+    margin-right: 40%;
+}
+.nave li:nth-child(3) {
+    margin-left: 34%;
+}
+.logo {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.logo:hover {
+    content: url(../Imagenes/logo3.png);
+}
+
+.lista:hover {
+    content: url(../Imagenes/lista2.png);
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 2%;
+    margin-top: auto;
+    width: 100%;
+}
+.abajo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 2%;
+}
+.abajo ul {
+    display: flex;
+    gap: 5%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.abajo img {
+    width: 2rem;
+    height: 2rem;
+}
+.texto_abajo {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.texto_abajo h2 {
+    margin-bottom: 2%;
+}
+.texto_abajo p {
+    line-height: 1.5;
+    margin: 1% 0;
+}
+.cuenta{
+    color: rgb(3, 3, 3);
+    padding: 2%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.login {
+    width: 30%;
+    margin: 0% auto 5%;
+    padding: 3%;
+    height: 200%;
+    background: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    border: 1px solid rgba(53, 53, 53, 0.393);
+    margin-bottom: 10%;
+}
+.login h2 {
+    text-align: center;
+    margin-bottom: 5%;
+}
+.campo {
+    margin-bottom: 4%;
+}
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.campo input {
+    width: 100%;
+    padding: 3%;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+}
+.opciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% 0;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+.opciones a {
+    color: #0066cc;
+    text-decoration: none;
+}
+.opciones a:hover {
+    text-decoration: underline;
+}
+button {
+    width: 100%;
+    padding: 3%;
+    background: rgb(2, 2, 2);
+    color: white;
+    border: none;
+    border-radius:0px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+button:hover {
+    background: #333;
+}
+.formulario{
+    display: flex;
+    gap: 5px;
+}
+.regis{
+    margin-top:4% ;
+}
+.itipistas{
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+}
+.boton-menu {
+    position: relative;
+}
+
+.menu-desplegable {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 180px;
+
+    background-color: white;
+
+    padding: 0;
+    margin-top: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    z-index: 9999;
+}
+
+.menu-desplegable.mostrar {
+    display: block;
+}
+
+.menu-desplegable a {
+    display: block !important;
+
+    padding: 12px 15px;
+
+    color: black !important;
+
+    text-decoration: none;
+}
+
+.menu-desplegable a:hover {
+    background-color: #eeeeee;
+
+    color: black !important;
+}
